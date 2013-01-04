@@ -1,0 +1,46 @@
+﻿<Window x:Class="kinectfinal.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="480" Width="853.33">
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Image Name="videoImage"
+                   Width="640"
+                   Height="480"></Image>
+            <Canvas Background="Transparent">
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseLeftHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseRightHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseSpine"
+                         Stroke="White" />
+                <Label Content="test" Height="38" Canvas.Left="527" Canvas.Top="10" Width="239" Name="state" FontSize="24"/>
+                <Label Content="state:" Canvas.Left="459" Canvas.Top="10" FontSize="24" Height="38"/>
+                <Label Content="" Canvas.Left="25" Canvas.Top="75"/>
+                <Label Content="right:" Canvas.Left="643" Canvas.Top="86" FontSize="20" Height="38"/>
+                <Label Content="null" Canvas.Left="708" Canvas.Top="86" FontSize="20" Height="38" Name="rightx"/>
+                <Label Content="null" Canvas.Left="708" Canvas.Top="124" FontSize="20" Height="38" Name="righty"/>
+                <Label Content="null" Canvas.Left="708" Canvas.Top="162" FontSize="20" Height="38" Name="rightz"/>
+                <Label Content="left:" Canvas.Left="-121" Canvas.Top="86" FontSize="20" Height="38"/>
+                <Label Content="null" Canvas.Left="-56" Canvas.Top="86" FontSize="20" Height="38" Name="leftx"/>
+                <Label Content="null" Canvas.Left="-56" Canvas.Top="124" FontSize="20" Height="38" Name="lefty"/>
+                <Label Content="null" Canvas.Left="-56" Canvas.Top="162" FontSize="20" Height="38" Name="leftz"/>
+            </Canvas>
+            <Label Content="null" HorizontalAlignment="Left" Height="35" Margin="645,252,-87,0" VerticalAlignment="Top" Width="82" FontSize="20" Name="Distance"/>
+            <Label Content="distance:" HorizontalAlignment="Left" Height="27" Margin="645,239,-72,0" VerticalAlignment="Top" Width="67"/>
+            <Label Content="null" HorizontalAlignment="Left" Height="35" Margin="645,332,-87,0" VerticalAlignment="Top" Width="82" FontSize="20" Name="Times"/>
+            <Label Content="times:" HorizontalAlignment="Left" Height="27" Margin="645,317,-72,0" VerticalAlignment="Top" Width="67"/>
+            <Label Content="null" HorizontalAlignment="Left" Height="35" Margin="645,292,-87,0" VerticalAlignment="Top" Width="82" FontSize="20" x:Name="Delta"/>
+            <Label Content="delta:" HorizontalAlignment="Left" Height="27" Margin="645,279,-72,0" VerticalAlignment="Top" Width="67"/>
+        </Grid>
+    </Viewbox>
+</Window>

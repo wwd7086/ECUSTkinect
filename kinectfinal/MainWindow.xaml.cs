@@ -36,7 +36,7 @@ namespace kinectfinal
 
         /////////declare
         ActionPool actionPool = new ActionPool();
-
+        //test
         public MainWindow()
         {
             InitializeComponent();

@@ -40,6 +40,7 @@ namespace kinectfinal
                 return true;
             else
                 return false;
+			//test2
         }
     }
 }

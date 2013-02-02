@@ -10,7 +10,7 @@ namespace kinectfinal
     abstract class LevelAction
     { 
         //show function in use
-        public enum Turn { none, scroll, zoom };
+        public enum Turn { none, scroll, zoom, switchover };
         public static Turn turn { get; set; }
 
         //index to the mainwindow

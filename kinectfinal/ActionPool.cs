@@ -14,6 +14,7 @@ namespace kinectfinal
         {
             levelActionList.Add(key: LevelAction.Turn.scroll, value: new Scroll());
             levelActionList.Add(key: LevelAction.Turn.zoom, value: new Zoom());
+   
         }
     }
 }

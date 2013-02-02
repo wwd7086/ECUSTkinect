@@ -16,6 +16,8 @@ using Microsoft.Kinect;
 using System.IO;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using Microsoft.Speech.AudioFormat;
+using Microsoft.Speech.Recognition;
 
 namespace kinectfinal
 {
@@ -36,7 +38,8 @@ namespace kinectfinal
 
         /////////declare
         ActionPool actionPool = new ActionPool();
-        //test
+        VoicePool voicePool = new VoicePool();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -64,12 +67,20 @@ namespace kinectfinal
             cosensor = new CoordinateMapper(_sensor);
             _sensor.Start();
             // 启动传感器
+
+            //语音命令切换PPT
+            voicePool.voiceControlList[VoiceControl.turn].PagesTurnViaVoice(_sensor);      
+
             _sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
             _sensor.ColorFrameReady += new EventHandler<ColorImageFrameReadyEventArgs>(sensor_ColorFrameReady);
             // 打开传感器色彩数据流
+
             _sensor.DepthStream.Enable(DepthImageFormat.Resolution320x240Fps30);
+            // 打开传感器深度数据流
+
             _sensor.SkeletonStream.Enable();
             _sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(sensor_SkeletonFrameReady);
+            // 打开传感器骨骼数据流
 
             _sensor.ElevationAngle = 0;
 

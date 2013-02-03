@@ -21,7 +21,7 @@ namespace kinectfinal
         {
             if (turn == Turn.none)
             {
-                if (rightHand.Position.Y > spine.Position.Y && leftHand.Position.Y < spine.Position.Y &&                        //在胸前
+                if (leftHand.Position.Y > spine.Position.Y && rightHand.Position.Y < spine.Position.Y &&                        //在胸前
                      App.compareValue(rightHand.Position.Z, leftHand.Position.Z, 0.1f) &&                                            //在同一平面
                      App.comparePoint(rightHand.Position, preRighthand, 0.01f) && App.comparePoint(leftHand.Position, preLefthand, 0.01f)) //静止
                 {
@@ -57,7 +57,7 @@ namespace kinectfinal
             }
 
             else if (App.compareValue(rightHand.Position.Z, leftHand.Position.Z, 0.15f) &&                     //在同一平面
-                     rightHand.Position.Y > spine.Position.Y && leftHand.Position.Y < spine.Position.Y)   //在胸前
+                     leftHand.Position.Y > spine.Position.Y && rightHand.Position.Y < spine.Position.Y)   //在胸前
             {
                 if (App.compareValue(handLevelZ, rightHand.Position.Z, 0.12f) && App.compareValue(handLevelZ, leftHand.Position.Z, 0.12f)) //双手同在初始平面
                 {
